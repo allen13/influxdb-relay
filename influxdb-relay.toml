@@ -1,0 +1,8 @@
+[[http]]
+name = "influxdb-relay"
+bind-addr = "0.0.0.0:8086"
+default-retention-policy = "default"
+output = [
+    { name="influxdb", location = "http://influxdb:8086/write" },
+    { name="kapacitor", location = "http://kapacitor:9092/write" },
+]
